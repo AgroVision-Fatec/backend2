@@ -4,4 +4,4 @@
 
 #### Ativar o ambiente virtual do python, no terminal: ./env/Scripts/activate
 
-#### Instalar dependências, no terminal: pip install requirements.txt
+#### Instalar dependências, no terminal: pip install -r requirements.txt
