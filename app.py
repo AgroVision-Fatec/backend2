@@ -20,7 +20,7 @@ def processar_imagem():
     resultado = script_pragas()
   
 
-    # os.remove('IA/imgs/imagem.jpg')
+    os.remove('IA/imgs/imagem.jpg')
     return jsonify({'resultado': resultado})
 
 
