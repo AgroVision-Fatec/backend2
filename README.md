@@ -1,7 +1,7 @@
-## git clone https://github.com/AgroVision-Fatec/backend2.git
+### git clone https://github.com/AgroVision-Fatec/backend2.git
 
-## Criando ambiente virtual, no terminal: py -m venv env
+### Criando ambiente virtual, no terminal: py -m venv env
 
-## Ativar o ambiente virtual do python, no terminal: ./env/Scripts/activate
+### Ativar o ambiente virtual do python, no terminal: ./env/Scripts/activate
 
-## Instalar dependências, no terminal: pip install requirements.txt
+### Instalar dependências, no terminal: pip install requirements.txt
