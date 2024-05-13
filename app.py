@@ -1,5 +1,8 @@
 from flask import Flask, request, jsonify
-# import seu_script_python
+import os
+from contabilizar_pragas import script_pragas
+
+
 
 app = Flask(__name__)
 
@@ -9,14 +12,19 @@ def processar_imagem():
         return jsonify({'error': 'No image provided'}), 400
     
     imagem = request.files['imagem']
+    imagem.save('IA/imgs/imagem.jpg')
 
-    # Salve a imagem em um diretório temporário ou onde preferir
-    imagem.save('caminho/para/salvar/imagem.jpg')
+    resultado = script_pragas()
+  
 
-    # Chame seu script Python para processar a imagem
-    resultado = seu_script_python.processar_imagem('caminho/para/salvar/imagem.jpg')
-
+    os.remove('IA/imgs/imagem.jpg')
     return jsonify({'resultado': resultado})
+
+
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({'mensagem': 'Aplicativo Flask rodando'})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
